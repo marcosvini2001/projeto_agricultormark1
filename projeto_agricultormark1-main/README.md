@@ -177,3 +177,6 @@ O prompt é injetado automaticamente pelo back-end antes de cada requisição à
 - Este projeto **não utiliza banco de dados**.
 - O histórico é mantido no front-end (`messages`) e enviado ao back-end a cada requisição.
 - A persistência via LocalStorage é opcional e funciona apenas no navegador do usuário.
+
+## Link Hospedado no Render:
+https://projeto-agricultormark1.onrender.com/
