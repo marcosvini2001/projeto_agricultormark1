@@ -278,7 +278,7 @@ async function sendMessage(text) {
     .map((m) => ({ role: m.role, content: m.content }));
 
   try {
-    const response = await fetch('/chat', {
+    const response = await fetch(''https://projeto-agricultormark1.onrender.com/chat', {
       method: 'POST',
       headers: { 
         'Content-Type': 'application/json',
