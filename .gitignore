@@ -1,0 +1,6 @@
+node_modules/
+.env
+*.log
+.github-publish.env
+projeto_final/
+

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampoVerde — Assistente Agrícola</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="header-brand">
+        <span class="logo" aria-hidden="true">🌾</span>
+        <div>
+          <h1>CampoVerde</h1>
+          <p class="subtitle">Seu assistente agrícola inteligente</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <span class="message-counter" id="messageCounter" title="Total de mensagens">0 mensagens</span>
+        <button type="button" class="btn btn-icon" id="themeToggle" title="Alternar tema" aria-label="Alternar tema claro/escuro">
+          <span id="themeIcon">🌙</span>
+        </button>
+        <button type="button" class="btn btn-secondary" id="newChatBtn">
+          <span aria-hidden="true">🔄</span> Nova Conversa
+        </button>
+      </div>
+    </header>
+
+    <main class="chat-container">
+      <div class="welcome" id="welcome">
+        <div class="welcome-icon">🚜</div>
+        <h2>Bem-vindo ao CampoVerde!</h2>
+        <p>Tire suas dúvidas sobre agricultura: plantio, colheita, pragas, irrigação, solo e muito mais.</p>
+        <div class="suggestions">
+          <button type="button" class="suggestion-chip" data-suggestion="Qual a melhor época para plantar milho?">
+            Época de plantio do milho
+          </button>
+          <button type="button" class="suggestion-chip" data-suggestion="Como identificar deficiência de nitrogênio nas plantas?">
+            Deficiência de nitrogênio
+          </button>
+          <button type="button" class="suggestion-chip" data-suggestion="O que é rotação de culturas e por que é importante?">
+            Rotação de culturas
+          </button>
+        </div>
+      </div>
+
+      <div class="messages" id="messages" role="log" aria-live="polite" aria-label="Histórico de mensagens"></div>
+
+      <div class="loading hidden" id="loading" aria-live="assertive">
+        <div class="spinner" aria-hidden="true"></div>
+        <span>Pensando...</span>
+      </div>
+    </main>
+
+    <footer class="input-area">
+      <form id="chatForm" class="input-form">
+        <textarea
+          id="messageInput"
+          placeholder="Digite sua dúvida sobre agricultura..."
+          rows="1"
+          maxlength="2000"
+          aria-label="Campo de mensagem"
+        ></textarea>
+        <button type="submit" class="btn btn-primary" id="sendBtn" aria-label="Enviar mensagem">
+          <span aria-hidden="true">📤</span> Enviar
+        </button>
+      </form>
+      <p class="input-hint">Pressione <kbd>Enter</kbd> para enviar · <kbd>Shift+Enter</kbd> para nova linha</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
